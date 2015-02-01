@@ -1,0 +1,10 @@
+#!/bin/bash
+
+MACPORTS_GIT_SOURCE=/opt/src/macports-git
+
+cd $MACPORTS_GIT_SOURCE &&
+git stash &&
+git checkout master &&
+git pull upstream master &&
+git push origin master
+sudo port -v sync

@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'FileUtils'
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: mvln [options] src dest"
+
+  opts.on("-v", "--[no-]verbose", "Run verbosely") do |v|
+    options[:verbose] = v
+  end
+end.parse!
+
+p options
+p ARGV
